@@ -7,6 +7,5 @@ def shift(array: List[int], num: int) -> List[int]:
     if num > len(array):
         raise ValueError
     if array:
-        num = num % len(array)
         return array[num:] + array[:num]
     return []
