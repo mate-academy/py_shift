@@ -7,7 +7,7 @@ def shift(item_list: List[int], num: int) -> List[int]:
     if num > len(item_list):
         raise ValueError
 
-    left = [i for i in item_list if item_list.index(i) < num]
-    right = [i for i in item_list if item_list.index(i) > num - 1]
+    left = item_list[0:num]
+    right = item_list[num:]
     right.extend(left)
     return right
